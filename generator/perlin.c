@@ -72,8 +72,8 @@ main(int argc, char *argv[])
 {
     int x, y;
     for(y=0; y<*argv[1]; y++) {
-        for(x=0; x<*argv[2]; x++) {
-            printf("%f,", perlin2d(x, y, 0.1, 4));
+        for(x=0; x<*argv[1]; x++) {
+            printf("%f,", perlin2d(*argv[2] * *argv[1] + x, *argv[3] * *argv[1] + y, 0.1, 4));
         }
         printf("\n");
     }
